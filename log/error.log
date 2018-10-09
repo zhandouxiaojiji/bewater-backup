@@ -1,0 +1,14 @@
+[00000007][2018-10-09 11:48:53] LAUNCH snlua service_mgr
+[00000008][2018-10-09 11:48:53] LAUNCH snlua backup
+[00000009][2018-10-09 11:48:53] LAUNCH snlua service_provider
+[0000000a][2018-10-09 11:48:53] LAUNCH snlua service_cell schedule
+[0000000b][2018-10-09 11:48:53] LAUNCH snlua ws/watchdog webconsole.webconsole webconsole.player_t
+[0000000b][2018-10-09 11:48:53] [webconsole] 后台地址: www.kaizhan8.com:8890
+[0000000c][2018-10-09 11:48:53] LAUNCH snlua ws/agent webconsole.player_t
+[0000000b][2018-10-09 11:48:53] Listening 0.0.0.0:8890
+[00000002][2018-10-09 11:48:53] KILL self
+[0000000c][2018-10-09 11:48:55] [webconsole] webconsole login
+[0000000d][2018-10-09 11:48:55] LAUNCH snlua web/webclient
+[0000000c][2018-10-09 11:49:23] [webconsole] webconsole login
+[0000000c][2018-10-09 11:49:26] [webconsole] get_blacklist
+[0000000c][2018-10-09 11:49:26] [webconsole] get_blacklist
