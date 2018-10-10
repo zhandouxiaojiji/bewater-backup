@@ -34,12 +34,12 @@ local function init()
 end
 
 skynet.start(function()
-    print("start")
+    trace("start")
 
     -- 后台服务
     local c = skynet.newservice("ws/watchdog", "webconsole.webconsole", "webconsole.player_t")
     skynet.call(c, "lua", "start", {
-        port = conf.webconsole.port,
+        port    = conf.webconsole.port,
         preload = 1,
     })
 

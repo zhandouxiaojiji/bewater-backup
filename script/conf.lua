@@ -18,7 +18,7 @@ local conf = {
     },
 
     schedule = {
-        db = {   
+        animal = {   
             mongo = {
                 host = "127.0.0.1",
                 port = 19999,
@@ -26,8 +26,7 @@ local conf = {
             },
             redis = {
                 host = "127.0.0.1",
-                port = 19999,
-            },
+                port = 19999, },
             mysql = {
                 host = "127.0.0.1",
                 port = 3306,
@@ -36,6 +35,10 @@ local conf = {
             date = {hour = 13, min = 52},
         },
     },
+
+    mongodump = "/home/huangjx/mongo/bin/mongodump",
+
+    path = "/home/huangjx/backup",
 }
 
 return conf
