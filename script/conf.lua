@@ -57,6 +57,8 @@ local conf = {
     mongorestore = "/home/huangjx/mongo/bin/mongorestore",
     mysqldump    = "/usr/bin/mysqldump",
     mysql        = "/usr/bin/mysql",
+    redis_cli    = "/home/huangjx/redis/bin/redis-cli",
+    redis_data   = "/home/huangjx/redis/data",
 
     path = "/home/huangjx/backup",
 }

@@ -16,9 +16,9 @@ function test_mongo()
     db[c.name].testdb:safe_insert({test_key = "aa", test_value = 2})
 end
 
-function test_backup_mongo()
-    print("test_backup_mongo")
-    mongo_backup.backup("test")
+function test_dump_mongo()
+    print("test_dump_mongo")
+    mongo_backup.dump("test")
 end
 
 function test_restore_mongo()
@@ -30,21 +30,28 @@ function test_mysql()
     print("test_mysql")
 end
 
-function test_backup_mysql()
-    print("test_backup_mysql")
+function test_dump_mysql()
+    print("test_dump_mysql")
     mysql_backup.dump("test")
 end
 
 function test_restore_mysql()
     print("test_restore_mysql")
-    mysql_backup.restore("test_20181010_1638.bk")
+    mysql_backup.restore("test_20181010_1638")
+end
+
+function test_dump_redis()
+    print("test_dump_redis")
+    redis_backup.dump("test")
 end
 
 skynet.start(function()
     --test_mongo()
-    --test_backup_mongo()
+    test_dump_mongo()
     --test_restore_mongo()
      
-    --test_backup_mysql()
-    test_restore_mysql()
+    test_dump_mysql()
+    --test_restore_mysql()
+    
+    test_dump_redis()
 end)
