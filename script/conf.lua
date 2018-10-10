@@ -42,7 +42,7 @@ local conf = {
             },
             redis = {
                 host = "127.0.0.1",
-                port = 19999, },
+                port = 19998, },
             mysql = {
                 host = "127.0.0.1",
                 port = 3306,
@@ -55,6 +55,8 @@ local conf = {
 
     mongodump    = "/home/huangjx/mongo/bin/mongodump",
     mongorestore = "/home/huangjx/mongo/bin/mongorestore",
+    mysqldump    = "/usr/bin/mysqldump",
+    mysql        = "/usr/bin/mysql",
 
     path = "/home/huangjx/backup",
 }

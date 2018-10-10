@@ -26,8 +26,24 @@ function test_restore_mongo()
     mongo_backup.restore('test_mongo_20181010_1432', '--drop')
 end
 
+function test_mysql()
+    print("test_mysql")
+end
+
+function test_backup_mysql()
+    print("test_backup_mysql")
+    mysql_backup.dump("test")
+end
+
+function test_restore_mysql()
+    print("test_restore_mysql")
+end
+
 skynet.start(function()
     --test_mongo()
     --test_backup_mongo()
-    test_restore_mongo()
+    --test_restore_mongo()
+   
+    test_backup_mysql()
+
 end)
