@@ -34,9 +34,27 @@ local conf = {
             },
             date = {hour = 13, min = 52},
         },
+        test = {   
+            mongo = {
+                host = "127.0.0.1",
+                port = 19999,
+                name = "test_backup",
+            },
+            redis = {
+                host = "127.0.0.1",
+                port = 19999, },
+            mysql = {
+                host = "127.0.0.1",
+                port = 3306,
+                name = "test",
+            },
+            date = {hour = 13, min = 52},
+        },
+
     },
 
-    mongodump = "/home/huangjx/mongo/bin/mongodump",
+    mongodump    = "/home/huangjx/mongo/bin/mongodump",
+    mongorestore = "/home/huangjx/mongo/bin/mongorestore",
 
     path = "/home/huangjx/backup",
 }
