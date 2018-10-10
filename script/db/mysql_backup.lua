@@ -16,14 +16,13 @@ function M.dump(cname)
 end
 
 function M.restore(filename, option)
-    local cname = string.match(dirname, "[^_]+")
+    local cname = string.match(filename, "[^_]+")
     local c = conf.schedule[cname].mysql
-    local cmd = string.format("%s -h %s:%d %s %s %s -d %s %s/mysql/%s/%s/%s", 
-        conf.mongorestore, c.host, c.port, c.user and "-u"..c.user or "", c.password and "-p"..c.password or "", 
-        option or "", c.name, conf.path, cname, dirname, c.name)
+    local cmd = string.format("%s -h %s -P %d %s %s %s %s < %s/mysql/%s/%s", 
+        conf.mysql, c.host, c.port, c.user and "-u"..c.user or "", c.password and "-p"..c.password or "", 
+        option or "", c.name, conf.path, cname, filename)
     print(cmd)
-    --bash(cmd)
-
+    bash(cmd)
 end
 
 return M

@@ -37,13 +37,14 @@ end
 
 function test_restore_mysql()
     print("test_restore_mysql")
+    mysql_backup.restore("test_20181010_1638.bk")
 end
 
 skynet.start(function()
     --test_mongo()
     --test_backup_mongo()
     --test_restore_mongo()
-   
-    test_backup_mysql()
-
+     
+    --test_backup_mysql()
+    test_restore_mysql()
 end)
