@@ -1,7 +1,7 @@
 local util = require "util"
 local conf = require "conf"
 conf = util.clone(conf)
-conf.desc = "共享数据中心测试服"
+conf.desc = "共享数据中心"
 conf.remote_host = "localhost"
 conf.remote_port = 22
 conf.remote_path = "/home/huangjx/test_server/share"

@@ -18,6 +18,9 @@ local function to_option(...)
 end
 
 function M.mongo(cmd, cname, ...)
+    if not cname then
+        return "请输入配置名"
+    end
     if cmd == "dump" then
         mongo_backup.dump(cname, to_option(...))
     elseif cmd == "restore" then
@@ -28,6 +31,9 @@ function M.mongo(cmd, cname, ...)
 end
 
 function M.mysql(cmd, cname, ...)
+    if not cname then
+        return "请输入配置名"
+    end
     if cmd == "dump" then
         mysql_backup.dump(cname, to_option(...))
     elseif cmd == "restore" then
@@ -38,6 +44,9 @@ function M.mysql(cmd, cname, ...)
 end
 
 function M.redis(cmd, cname, ...)
+    if not cname then
+        return "请输入配置名"
+    end
     if cmd == "dump" then
         redis_backup.dump(cname, to_option(...))
     elseif cmd == "restore" then
