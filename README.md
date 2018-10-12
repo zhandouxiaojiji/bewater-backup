@@ -31,6 +31,6 @@ local conf = {
 }
 ```
 # GM指令
-backup [数据库类型] dump [配置名]
+backup [数据库类型] dump [配置名]  
 backup [数据库类型] restore [备份文件名]
 
