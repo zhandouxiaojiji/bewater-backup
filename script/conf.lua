@@ -3,9 +3,9 @@ local conf = {
     workspace = skynet.getenv('workspace'),
 
     proj = "schedule",
-    desc = "定时执行节点(开发服)",
+    desc = "备份节点(开发服)",
     webconsole = {
-        host = "www.kaizhan8.com",
+        host = "game.kaizhan8.com",
         port = 8890,
     },
 
@@ -26,7 +26,8 @@ local conf = {
             },
             redis = {
                 host = "127.0.0.1",
-                port = 19999, },
+                port = 19999, 
+            },
             mysql = {
                 host = "127.0.0.1",
                 port = 3306,
@@ -48,7 +49,7 @@ local conf = {
                 port = 3306,
                 name = "test",
             },
-            date = {hour = 13, min = 52},
+            date = {hour = 10, min = 55},
         },
 
     },

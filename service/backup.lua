@@ -1,17 +1,24 @@
 local skynet    = require "skynet"
 local schedule  = require "schedule"
+local util      = require "util"
 local conf      = require "conf"
 local gm        = require "gm"
-local log       = require "log"
 
+local mongo_backup  = require "db.mongo_backup"
+local redis_backup  = require "db.redis_backup"
+local mysql_backup  = require "db.mysql_backup"
+
+local log       = require "log"
 local trace     = log.trace("backup")
 
 local function fork(cname)
-    local c = conf.schedule[cname].mongo
-    assert(type(c.date) == "table")
+    local c = conf.schedule[cname]
+    local date = conf.schedule[cname].date
+    assert(type(date) == "table")
     skynet.fork(function()
         while true do
-            schedule.submit(c.date) 
+            schedule.submit(date) 
+            print("do backup")
             if c.mongo then
                 trace("backup mongo")
                 mongo_backup.dump(cname)

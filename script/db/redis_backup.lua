@@ -1,3 +1,4 @@
+local skynet = require "skynet"
 local conf = require "conf"
 require "bash"
 
@@ -7,7 +8,7 @@ function M.dump(cname)
     assert(c.host and c.port)
     assert(conf.redis_cli and conf.redis_data)
     local cmd = string.format("%s -h %s -p %s save", conf.redis_cli, c.host, c.port)
-    print(cmd)
+    skynet.error(cmd)
     bash(cmd)
     bash("mkdir -p %s/%s/redis", conf.path, cname)
     bash("cp %s/dump.rdb %s/%s/redis/%s_%s", 
